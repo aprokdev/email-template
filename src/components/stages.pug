@@ -1,0 +1,15 @@
+include stage.pug
+
+mixin stages(mainUrl)
+    if mainUrl
+        // БЛОК С ИКОНКАМИ/СТАДИЯМИ | начало
+        - var iconLink = `https://tracktrack-news-module.s3.us-east-2.amazonaws.com/static/mail-images/${icon}.jpg`
+        
+        table(align="center" width="100%" border="0" cellpadding="0" cellspacing="0")
+            tr
+                td(style="padding-bottom: 0; padding-top: 18px; padding-left: 0; padding-right: 0;")
+                    +stage(mainUrl, 'info', 'Завершена антикоррупцинная экспертиза info')
+                    +stage(mainUrl, 'decline', 'Завершена антикоррупцинная экспертиза decline')
+                    +stage(mainUrl, 'play', 'Завершена антикоррупцинная экспертиза play')
+                    +stage(mainUrl, 'check', 'Завершена антикоррупцинная экспертиза check')
+        // БЛОК С ИКОНКАМИ/СТАДИЯМИ | конец

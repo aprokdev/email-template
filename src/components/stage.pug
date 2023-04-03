@@ -1,0 +1,19 @@
+
+
+mixin stage(mainUrl, icon, text)
+    if mainUrl && icon && text
+        - var iconLink = `https://tracktrack-news-module.s3.us-east-2.amazonaws.com/static/mail-images/${icon}.jpg`
+        - var imageStyle = "background-image: url(${iconLink}); background-size: 24px 24px; display: block; width: 24px; height: 24px; background-color: #eff5fa; border-radius: 12px; margin-right: 0;"
+        // Стадия | начало
+        tr
+            td(style="padding-bottom: 0; padding-top: 0; padding-left: 0; padding-right: 0;")
+                table(width="100%" border="0" cellpadding="0" cellspacing="0")
+                    tr
+                        // иконка
+                        td(width="24" align="center" valign="top" style="padding-bottom: 16px")
+                            img(src=`${iconLink}` width="24" height="24" alt="" style=`${imageStyle}`)
+                        // описание
+                        td(valign="top" style="padding-left: 12px; padding-top: 3px; padding-bottom: 16px;")
+                            div(style="font-weight: normal; font-size: 13px; line-height: 20px; color: #999999;")
+                                a(target="_blank" href=`${mainUrl}` style="display: block; cursor: pointer; color: #999999; text-decoration: none;")= text
+        // Стадия | конец

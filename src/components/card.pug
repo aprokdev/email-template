@@ -1,0 +1,18 @@
+include summary.pug
+include tags.pug
+include description.pug
+include stages.pug
+include separator.pug
+include padding.pug
+
+mixin card(summary, mainUrl, tags, isImportant, descriptionText, stages)
+    // Карточка | начало
+    tr
+        td(style="padding-bottom: 0; padding-top: 0")
+            +summary(mainUrl, summary)
+            +tags(tags, isImportant)
+            +description(mainUrl, descriptionText)
+            if stages
+                +stages(mainUrl)
+            +padding(24)
+    // Карточка | конец

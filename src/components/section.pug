@@ -1,0 +1,16 @@
+include header.pug
+include summary.pug
+include tags.pug
+include description.pug
+include stages.pug
+include card.pug
+include separator.pug
+
+mixin section(header, summary, mainUrl, tags, isImportant, descriptionText)
+    // Раздел | начало
+
+    +header(header)
+    +card(summary, mainUrl, tags, isImportant, descriptionText, true)
+    +card(null, mainUrl, tags, isImportant, descriptionText, false)
+
+    // Раздел | конец

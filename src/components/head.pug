@@ -1,0 +1,47 @@
+- var ttLogoLink = 'https://tracktrack-news-module.s3.us-east-2.amazonaws.com/static/img/mail-mob-logo.png'
+- var covidIconLink = 'https://tracktrack-news-module.s3.us-east-2.amazonaws.com/static/mail-images/planet.png'
+- var headStyle = "width: 100%; min-width: 290px; max-width: 600px; margin-right: auto; margin-left: auto; padding-top: 0; padding-bottom: 0;"
+- var headTopStyle = `padding-top: 28px;padding-left: 20px; padding-right: 20px; padding-bottom: 0; background-image: url(${ttLogoLink}); background-color: #3377bb; background-repeat: no-repeat; background-size: 160px auto; background-position: top right;`
+- var nameStyle = "font-size: 24px; line-height: 1.33; color: #ffffff; font-weight: 400; -webkit-text-size-adjust: none;"
+- var tableWrapStyles = "width: 100%; min-width: 290px; max-width: 600px; margin-top: -1px; padding-top: 0; padding-bottom: 28px; padding-left: 20px; padding-right: 20px; margin-right: auto; margin-left: auto; background-color: #3377bb;"
+- var covidLinkStyle = "margin-left: auto; display: block; width: 95px; padding-left: 10px; font-size: 15px; font-weight: bold; line-height: 1.33; color: #fff; text-decoration: none; cursor: pointer; -webkit-text-size-adjust: none;"
+- var covidIconStyles = `display: block; border-radius: 20px; background-image: url(${covidIconLink}); background-size: 20px 20px; width: 20px;  height: 20px; background-color: #3377bb; margin-right: 0;`
+- var covidTextLinkStyle = "display: block; width: 95px; font-size: 14px; font-weight: bold; line-height: 20px !important; color: #fff; text-decoration: none; cursor: pointer; -webkit-text-size-adjust: none;"
+- var pravoTextLinkStyles = "padding-left: 10px; font-size: 15px; font-weight: bold; line-height: 1.33; color: #fff; text-decoration: none; cursor: pointer; -webkit-text-size-adjust: none;"
+
+// Шапка начало
+tr
+    td(align="center" valign="top")
+        table( align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style=`${headStyle}`)
+            tr
+                td(class="wrap head" colspan="2" bgcolor="#3377bb" bordercolor="#3377bb" style=`${headTopStyle}`)
+                    div(style=`${nameStyle}`)
+                        | Константин
+                        br
+                        | Константинопольский,
+                    div(style=`${nameStyle}`) приветствуем!
+
+        table(class="wrap" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style=`${tableWrapStyles}`)
+            tr
+                td(bgcolor="#3377bb" valign="bottom" bordercolor="#3377bb" style="padding-top: 20px")
+                    span(style="font-size: 15px; font-weight: normal; line-height: 1.33; color: #84add6; -webkit-text-size-adjust: none;")
+                        | Все события 
+                        a(style="white-space: nowrap; text-decoration: none; color: #84add6;") от 21.09.2019
+                td(bgcolor="#3377bb" valign="bottom" bordercolor="#3377bb" style="padding-top: 20px; text-align: right")
+                    table(width="100%" border="0" cellpadding="0" cellspacing="0")
+                        tr
+                            td(align="right" valign="bottom" style="padding-bottom: 5px")
+                                a(target="_blank" href="https://pravo.tracktrack.ru/map/" style=`${covidLinkStyle}`)
+                                    table(border="0" cellpadding="0" cellspacing="0" width="95")
+                                        tr
+                                            td(valign="middle")
+                                                img(src=`${covidIconLink}` width="20" height="20" alt="" style=`${covidIconStyles}`)
+                                            td(valign="middle" style="padding-left: 8px; font-size: 14px; font-weight: bold; color: #ffffff; font-size: 15px; line-height: 20px;")
+                                                a(target="_blank" href="https://pravo.tracktrack.ru/map/" style=`${covidTextLinkStyle}`)
+                                                    | COVID-19
+
+                        tr
+                            td(align="right" valign="bottom")
+                                a(target="_blank" href="https://pravo.tracktrack.ru/" style=`${pravoTextLinkStyles}`)
+                                    | Pravo.TrackTrack.ru
+// Шапка конец
